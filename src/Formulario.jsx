@@ -22,7 +22,7 @@ function Formulario({crearColor}) {
             [r,g,b].forEach(n => valido = valido && n <= 255)
 
             if(valido){
-              return fetch("http://localhost:4000/crear-color",{
+              return fetch("https://app-colores.onrender.com/colores/nuevo",{
                 method : "POST",
                 body : JSON.stringify({r,g,b}),
                 headers : {
